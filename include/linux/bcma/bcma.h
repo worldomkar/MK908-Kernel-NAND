@@ -181,38 +181,38 @@ struct bcma_bus {
 	struct bcma_drv_pci drv_pci;
 };
 
-extern inline u32 bcma_read8(struct bcma_device *core, u16 offset)
+inline u32 bcma_read8(struct bcma_device *core, u16 offset)
 {
 	return core->bus->ops->read8(core, offset);
 }
-extern inline u32 bcma_read16(struct bcma_device *core, u16 offset)
+inline u32 bcma_read16(struct bcma_device *core, u16 offset)
 {
 	return core->bus->ops->read16(core, offset);
 }
-extern inline u32 bcma_read32(struct bcma_device *core, u16 offset)
+inline u32 bcma_read32(struct bcma_device *core, u16 offset)
 {
 	return core->bus->ops->read32(core, offset);
 }
-extern inline
+inline
 void bcma_write8(struct bcma_device *core, u16 offset, u32 value)
 {
 	core->bus->ops->write8(core, offset, value);
 }
-extern inline
+inline
 void bcma_write16(struct bcma_device *core, u16 offset, u32 value)
 {
 	core->bus->ops->write16(core, offset, value);
 }
-extern inline
+inline
 void bcma_write32(struct bcma_device *core, u16 offset, u32 value)
 {
 	core->bus->ops->write32(core, offset, value);
 }
-extern inline u32 bcma_aread32(struct bcma_device *core, u16 offset)
+inline u32 bcma_aread32(struct bcma_device *core, u16 offset)
 {
 	return core->bus->ops->aread32(core, offset);
 }
-extern inline
+inline
 void bcma_awrite32(struct bcma_device *core, u16 offset, u32 value)
 {
 	core->bus->ops->awrite32(core, offset, value);

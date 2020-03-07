@@ -73,7 +73,7 @@ extern int write_ext_dsp_data(struct bridge_dev_context *dev_context,
  * ======== write_ext32_bit_dsp_data ========
  * Writes 32 bit data to the external memory
  */
-extern inline void write_ext32_bit_dsp_data(const
+inline void write_ext32_bit_dsp_data(const
 					struct bridge_dev_context *dev_context,
 					u32 dsp_addr, u32 val)
 {
@@ -88,7 +88,7 @@ extern inline void write_ext32_bit_dsp_data(const
  * ======== read_ext32_bit_dsp_data ========
  * Reads 32 bit data from the external memory
  */
-extern inline u32 read_ext32_bit_dsp_data(const struct bridge_dev_context
+inline u32 read_ext32_bit_dsp_data(const struct bridge_dev_context
 					  *dev_context, u32 dsp_addr)
 {
 	u32 ret;

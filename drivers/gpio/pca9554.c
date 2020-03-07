@@ -119,7 +119,7 @@ struct i2c_client *pca9554_client;
 #define pca9554clearbit(a,num) ((a)&(~(0x01<<(num))))
 
 static short int portnum[PCA9554_PortNum]={PCA9554_PortPinNum};
-extern inline struct gpio_chip *gpio_to_chip(unsigned gpio);
+inline struct gpio_chip *gpio_to_chip(unsigned gpio);
 extern struct lock_class_key gpio_lock_class;
 extern struct lock_class_key gpio_lock_class;
 struct workqueue_struct *pca9554workqueue;

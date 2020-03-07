@@ -85,7 +85,7 @@ MODULE_DEVICE_TABLE(i2c, tca6424_id);
 static short int portnum[TCA6424_PortNum]={ TCA6424_Port0PinNum,
                                             TCA6424_Port1PinNum,TCA6424_Port2PinNum};
 
-extern inline struct gpio_chip *gpio_to_chip(unsigned gpio);
+inline struct gpio_chip *gpio_to_chip(unsigned gpio);
 
 int tca6424_irq_read_inputreg(void *data,char *buf)
 {

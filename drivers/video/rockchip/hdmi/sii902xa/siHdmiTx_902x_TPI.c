@@ -35,7 +35,7 @@ byte 				tpivmode[3];  // saved TPI Reg0x08/Reg0x09/Reg0x0A values.
 
 //sbit siHdmiTx_HwResetPin = P2^1; 	// Connected to 9022A/4A pin C3 (CRST#)
 
-extern inline void DelayMS (word MS);
+inline void DelayMS (word MS);
 extern byte I2CReadByte ( byte SlaveAddr, byte RegAddr );
 extern void I2CWriteByte ( byte SlaveAddr, byte RegAddr, byte Data );
 extern byte I2CReadBlock( byte SlaveAddr, byte RegAddr, byte NBytes, byte * Data );

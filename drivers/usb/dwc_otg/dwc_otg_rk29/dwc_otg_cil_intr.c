@@ -89,7 +89,7 @@ int32_t dwc_otg_handle_mode_mismatch_intr (dwc_otg_core_if_t *_core_if)
  *
  * @param _core_if Programming view of DWC_otg controller.
  */
-/*static*/ inline void hcd_start( dwc_otg_core_if_t *_core_if ) 
+static inline void hcd_start( dwc_otg_core_if_t *_core_if ) 
 {        
         if (_core_if->hcd_cb && _core_if->hcd_cb->start) {
                 _core_if->hcd_cb->start( _core_if->hcd_cb->p );

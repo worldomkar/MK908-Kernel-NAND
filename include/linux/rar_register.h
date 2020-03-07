@@ -44,7 +44,7 @@ int rar_lock(int rar_index);
 extern void unregister_rar(int num)  { }
 extern int rar_lock(int rar_index) { return -EIO; }
 
-extern inline int register_rar(int num,
+inline int register_rar(int num,
 		int (*callback)(unsigned long data), unsigned long data)
 {
 	return -ENODEV;
