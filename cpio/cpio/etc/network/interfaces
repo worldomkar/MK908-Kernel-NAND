@@ -1,0 +1,24 @@
+# interfaces(5) file used by ifup(8) and ifdown(8)
+auto lo
+iface lo inet loopback
+dns-nameservers 127.0.0.1
+dns-search digitalhome
+
+allow-hotplug eth0
+iface eth0 inet static
+hwaddress 00:e0:4c:36:10:65
+address 192.168.0.254
+netmask 255.255.255.0
+pre-up /sbin/iptables -F
+up /sbin/iptables-restore < /etc/fw
+
+allow-hotplug eth0:1
+iface eth0:1 inet static
+address 192.168.10.2
+netmask 255.255.255.252
+gateway 192.168.10.1
+
+allow-hotplug wlan0
+iface wlan0 inet static
+address 192.168.0.250
+netmask 255.255.255.0

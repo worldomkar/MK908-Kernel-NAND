@@ -1,0 +1,1 @@
+tmpfs	/var/spool/squid3 tmpfs user,noatime,nodiratime 0 0
