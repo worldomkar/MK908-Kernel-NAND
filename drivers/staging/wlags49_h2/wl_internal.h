@@ -993,7 +993,7 @@ struct wl_private
 #ifdef HAVE_NETDEV_PRIV
 #define wl_priv(dev) ((struct wl_private *) netdev_priv(dev))
 #else
-inline struct wl_private *wl_priv(struct net_device *dev)
+extern inline struct wl_private *wl_priv(struct net_device *dev)
 {
     return dev->priv;
 }
@@ -1023,7 +1023,7 @@ static inline void wl_unlock(struct wl_private *lp,
 /* Interrupt enable disable functions                               */
 /********************************************************************/
 
-inline void wl_act_int_on(struct wl_private *lp)
+extern inline void wl_act_int_on(struct wl_private *lp)
 {
 	/*
 	 * Only do something when the driver is handling
@@ -1035,7 +1035,7 @@ inline void wl_act_int_on(struct wl_private *lp)
 	}
 }
 
-inline void wl_act_int_off(struct wl_private *lp)
+extern inline void wl_act_int_off(struct wl_private *lp)
 {
 	/*
 	 * Only do something when the driver is handling

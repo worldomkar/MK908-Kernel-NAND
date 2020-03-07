@@ -31,7 +31,7 @@ struct dyn_arch_ftrace {
 #ifdef CONFIG_FRAME_POINTER
 #include <linux/mm.h>
 
-inline void *return_address(unsigned int level)
+extern inline void *return_address(unsigned int level)
 {
 	unsigned long *endstack, *fp, *ret_addr;
 	unsigned int current_level = 0;
@@ -59,7 +59,7 @@ inline void *return_address(unsigned int level)
 
 #else
 
-inline void *return_address(unsigned int level)
+extern inline void *return_address(unsigned int level)
 {
 	return NULL;
 }

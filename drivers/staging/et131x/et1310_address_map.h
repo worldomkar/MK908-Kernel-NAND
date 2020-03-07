@@ -212,12 +212,12 @@ struct global_regs {			/* Location: */
 #define INDEX10(x)	((x) & ET_DMA10_MASK)
 #define INDEX4(x)	((x) & ET_DMA4_MASK)
 
-inline void add_10bit(u32 *v, int n)
+extern inline void add_10bit(u32 *v, int n)
 {
 	*v = INDEX10(*v + n) | (*v & ET_DMA10_WRAP);
 }
 
-inline void add_12bit(u32 *v, int n)
+extern inline void add_12bit(u32 *v, int n)
 {
 	*v = INDEX12(*v + n) | (*v & ET_DMA12_WRAP);
 }

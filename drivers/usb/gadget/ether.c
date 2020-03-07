@@ -246,7 +246,7 @@ static int __init rndis_do_config(struct usb_configuration *c)
 		c->bmAttributes |= USB_CONFIG_ATT_WAKEUP;
 	}
 
-	return rndis_bind_config(c, hostaddr, (c != NULL && c->cdev != NULL? c->cdev->desc.idVendor: 8086), "USB ETHER VENDOR");
+	return rndis_bind_config(c, hostaddr);
 }
 
 static struct usb_configuration rndis_config_driver = {

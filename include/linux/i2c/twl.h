@@ -847,7 +847,7 @@ static inline int twl4030_remove_script(u8 flags) { return -EINVAL; }
 extern void twl6030_power_init(struct twl4030_power_data *power_data,\
 					unsigned long features);
 #else
-inline void twl6030_power_init(struct twl4030_power_data *power_data,\
+extern inline void twl6030_power_init(struct twl4030_power_data *power_data,\
 					unsigned long features) { }
 #endif
 
