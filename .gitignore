@@ -1,3 +1,9 @@
 *.o
 *.ko
 *.cmd
+*.S
+*.map
+*.mod
+*.builtin
+*.order
+*.mod.c
