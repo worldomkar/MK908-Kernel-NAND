@@ -16,4 +16,5 @@ obj-$(CONFIG_MT5931)  += mt5931/
 obj-$(CONFIG_MT5931_MT6622)  += mt5931/
 #obj-$(CONFIG_RTL8723AS) += rtl8723as/
 obj-$(CONFIG_MT7601)	+= rkusbwifi/
+obj-$(CONFIG_RTL8812AU) += rtl8812AU_8821AU_linux/
 #obj-m	+= wlan/
