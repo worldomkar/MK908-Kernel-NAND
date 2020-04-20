@@ -1,8 +1,5 @@
 #!/bin/sh
 
-insmod ./rk30xxnand-3.0.36.ko
-#insmod ./lib/modules/rkwifi.ko
-
 [ -d /dev ] || mkdir -m 0755 /dev
 [ -d /root ] || mkdir -m 0700 /root
 [ -d /sys ] || mkdir /sys
@@ -13,6 +10,11 @@ mount -t sysfs -o nodev,noexec,nosuid sysfs /sys
 mount -t proc -o nodev,noexec,nosuid proc /proc
 # Some things don't work properly without /etc/mtab.
 ln -sf /proc/mounts /etc/mtab
+
+insmod ./font.ko
+insmod ./softcursor.ko
+insmod ./bitblit.ko
+insmod ./fbcon.ko
 
 grep -q '\<quiet\>' /proc/cmdline || echo "Loading, please wait..."
 
@@ -354,3 +356,12 @@ unset resume_offset
 # Chain to real filesystem
 exec run-init ${rootmnt} ${init} "$@" ${recovery:+--startup-event=recovery} <${rootmnt}/dev/console >${rootmnt}/dev/console 2>&1
 panic "Could not execute run-init."
+
+
+insmod ./font.ko
+insmod ./softcursor.ko
+insmod ./bitblit.ko
+insmod ./fbcon.ko
+#insmod ./rk30xxnand-3.0.36.ko
+#insmod ./lib/modules/rkwifi.ko
+
