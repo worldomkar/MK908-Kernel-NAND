@@ -34,6 +34,7 @@
 #include <linux/earlysuspend.h>
 #include <linux/cpufreq.h>
 #include <linux/wakelock.h>
+#include <linux/rk_fb.h>
 
 #include <asm/io.h>
 #include <asm/div64.h>
@@ -55,9 +56,10 @@
 #include <mach/iomux.h>
 #include <mach/gpio.h>
 #include <mach/board.h>
-#include <mach/rk29_iomap.h>
+//#include <mach/rk29_iomap.h>
 #include <mach/pmu.h>
-#include <mach/rk29-ipp.h>
+#include <config/rk29/ipp.h>
+//#include <mach/rk29-ipp.h>
 #include <mach/ddr.h>
 
 #include "./display/screen/screen.h"

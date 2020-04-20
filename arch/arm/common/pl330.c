@@ -30,7 +30,6 @@
 
 #include <asm/unaligned.h>
 #include <asm/hardware/pl330.h>
-#include <mach/sram.h>
 
 /* Register and Bit field Definitions */
 #define DS		0x0
@@ -1251,8 +1250,7 @@ static int _setup_req(unsigned dry_run, struct pl330_thread *thrd,
 	if (!pxs->r->infiniteloop) {
 		do {
 			/* Error if xfer length is not aligned at burst size */
-			if (x->bytes % (BRST_SIZE(pxs->ccr)
-						* BRST_LEN(pxs->ccr)))
+			if (x->bytes % (BRST_SIZE(pxs->ccr) * BRST_LEN(pxs->ccr)))
 				return -EINVAL;
 
 			pxs->x = x;

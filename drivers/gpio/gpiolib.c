@@ -1225,7 +1225,7 @@ done:
 	spin_unlock_irqrestore(&gpio_lock, flags);
 	return status;
 }
-EXPORT_SYMBOL(gpio_request);//EXPORT_SYMBOL_GPL(gpio_request);
+EXPORT_SYMBOL(gpio_request);
 
 void gpio_free(unsigned gpio)
 {
@@ -1420,7 +1420,6 @@ fail:
 			__func__, gpio, status);
 	return status;
 }
-//EXPORT_SYMBOL_GPL(gpio_direction_input);
 EXPORT_SYMBOL(gpio_direction_input);
 
 
@@ -1479,7 +1478,6 @@ fail:
 			__func__, gpio, status);
 	return status;
 }
-//EXPORT_SYMBOL_GPL(gpio_direction_output);
 EXPORT_SYMBOL(gpio_direction_output);
 
 /* 
@@ -1539,7 +1537,6 @@ fail:
 			__func__, gpio, status);
 	return status;
 }
-//EXPORT_SYMBOL_GPL(gpio_pull_updown);
 EXPORT_SYMBOL(gpio_pull_updown);
 
 /**
@@ -1630,7 +1627,6 @@ int __gpio_get_value(unsigned gpio)
 	trace_gpio_value(gpio, 1, value);
 	return value;
 }
-//EXPORT_SYMBOL_GPL(__gpio_get_value);
 EXPORT_SYMBOL(__gpio_get_value);
 
 
@@ -1656,7 +1652,6 @@ void __gpio_set_value(unsigned gpio, int value)
 	trace_gpio_value(gpio, 0, value);
 	chip->set(chip, gpio - chip->base, value);
 }
-//EXPORT_SYMBOL_GPL(__gpio_set_value);
 EXPORT_SYMBOL(__gpio_set_value);
 
 /**
